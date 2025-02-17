@@ -1,75 +1,89 @@
-# Recipe Sharing App
+# Recipe Sharing CLI
 
-A command-line interface application for managing and sharing recipes. Users can create, search, update, and export their favorite recipes through an interactive console interface.
+A Node.js command-line interface application for managing recipes with MongoDB storage, featuring a clean, interactive UI and efficient data operations.
 
-## Features
+## Quick Start
 
-- Add new recipes with title, ingredients, and instructions
-- List all saved recipes
-- Search recipes by title or ingredients
-- Update existing recipes
-- Delete recipes
-- Export recipes to JSON files
-- Interactive CLI menu interface
+### Prerequisites
+- Node.js 12+
+- MongoDB 4.0+
+- npm 6+
 
-## Prerequisites
-
-- Node.js
-- MongoDB
-
-## Installation
-
+### Setup & Run
 ```bash
-# Clone the repository
+# Clone repository
 git clone https://github.com/prathamdby/recipe-sharing.git
-
-# Navigate to project directory
 cd recipe-sharing
 
 # Install dependencies
 npm install
 
-# Create .env file and configure environment variables
+# Configure environment
 cp .env.example .env
-```
 
-## Environment Variables
-
-Create a `.env` file in the root directory with:
-
-```
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-```
-
-## Usage
-
-Start the application:
-
-```bash
+# Start application
 npm start
 ```
 
-Use the interactive menu to:
+### MongoDB Setup
+```bash
+# Start MongoDB service
+mongod --dbpath /data/db
 
-1. Add Recipe - Create a new recipe
-2. List Recipes - View all saved recipes
-3. Search Recipe - Find recipes by title or ingredients
-4. Delete Recipe - Remove a recipe
-5. Export Recipe - Save a recipe as JSON file
-6. Update Recipe - Modify an existing recipe
-7. Exit - Close the application
+# Configure connection string in .env:
+MONGODB_URI=mongodb://localhost:27017/recipe-sharing
+```
 
-## Tech Stack
+## Core Features
 
-- Node.js
-- MongoDB (mongoose)
-- readline (for CLI interface)
+- **Recipe Management**
+  - Create & edit recipes
+  - Search by title/ingredients
+  - Export to JSON format
+  - Delete operations
+
+- **Interactive CLI**
+  - User-friendly menu system
+  - Real-time feedback
+  - Cross-platform support
+
+- **Data Handling**
+  - MongoDB persistence
+  - Schema validation
+  - Efficient querying
+  - Export capabilities
+
+## Technical Stack
+
+- **Runtime**: Node.js
+- **Storage**: MongoDB with Mongoose
+- **Interface**: readline module
+- **Config**: dotenv
+- **File I/O**: fs module
+
+## Development
+
+Enable debug logging:
+```bash
+DEBUG=* npm start
+```
+
+MongoDB debugging:
+```bash
+DEBUG=mongodb:* npm start
+```
+
+## Contributing
+
+Open to contributions! Please fork, create a feature branch, and submit a PR.
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License - See LICENSE file
 
-## Author
+## Links
 
-- [@prathamdby](https://github.com/prathamdby)
+- **Author**: [@prathamdby](https://github.com/prathamdby)
+- **Project**: [GitHub](https://github.com/prathamdby/recipe-sharing)
+
+See TECHNICAL_INDEX.md for detailed technical documentation.
