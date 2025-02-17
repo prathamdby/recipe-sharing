@@ -1,13 +1,21 @@
-# Recipe Sharing App
+# Recipe Sharing App (CLI)
 
-A modern web application for sharing and discovering recipes. Users can create, browse, and share their favorite recipes with the community.
+A command-line interface application for managing and sharing recipes. Users can create, search, update, and export their favorite recipes through an interactive console interface.
 
 ## Features
 
-- Recipe creation and management
-- Recipe browsing and search functionality
-- User authentication and profiles
-- Recipe categorization and tagging
+- Add new recipes with title, ingredients, and instructions
+- List all saved recipes
+- Search recipes by title or ingredients
+- Update existing recipes
+- Delete recipes
+- Export recipes to JSON files
+- Interactive CLI menu interface
+
+## Prerequisites
+
+- Node.js
+- MongoDB
 
 ## Installation
 
@@ -23,30 +31,44 @@ npm install
 
 # Create .env file and configure environment variables
 cp .env.example .env
-
-# Start the application
-npm start
 ```
 
 ## Environment Variables
 
-Create a `.env` file in the root directory with the following variables:
+Create a `.env` file in the root directory with:
 
 ```
-DATABASE_URL=your_mongodb_connection_string
 PORT=3000
+MONGODB_URI=your_mongodb_connection_string
 ```
+
+## Usage
+
+Start the application:
+
+```bash
+npm start
+```
+
+Use the interactive menu to:
+
+1. Add Recipe - Create a new recipe
+2. List Recipes - View all saved recipes
+3. Search Recipe - Find recipes by title or ingredients
+4. Delete Recipe - Remove a recipe
+5. Export Recipe - Save a recipe as JSON file
+6. Update Recipe - Modify an existing recipe
+7. Exit - Close the application
 
 ## Tech Stack
 
 - Node.js
-- Express.js
-- MongoDB
-- React/Next.js
+- MongoDB (mongoose)
+- readline (for CLI interface)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Author
 
