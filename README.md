@@ -1,4 +1,4 @@
-# Recipe Sharing App (CLI)
+# Recipe Sharing App
 
 A command-line interface application for managing and sharing recipes. Users can create, search, update, and export their favorite recipes through an interactive console interface.
 
